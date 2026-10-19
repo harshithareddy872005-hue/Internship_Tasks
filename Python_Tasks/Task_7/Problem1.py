@@ -1,14 +1,14 @@
 
-def superReducedString(s):
-    stack = []
+# Problem 1: Set .symmetric_difference() Operation
+# HackerRank: https://www.hackerrank.com/challenges/py-set-symmetric-difference-operation/problem
 
-    for char in s:
-        if stack and stack[-1] == char:
-            stack.pop()
-        else:
-            stack.append(char)
+n = int(input())
+english = set(map(int, input().split()))
 
-    if not stack:
-        return "Empty String"
+m = int(input())
+french = set(map(int, input().split()))
 
-    return ''.join(stack)
+result = english.symmetric_difference(french)
+print(len(result))
+
+
